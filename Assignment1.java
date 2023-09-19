@@ -7,7 +7,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Assignment1 {
   public static void main(String[] args) {
     // Add your code here
-    
+    String inputString, reversedString = "";
+    double temperatureInFahrenheit, temperatureInCelsius;
 
     Scanner scan = new Scanner(System.in);
 
@@ -23,16 +24,15 @@ public class Assignment1 {
 
 
     System.out.println("Please enter a number in Fahrenheit:");
-    double temperatureInFahrenheit = scan.nextDouble();
+    temperatureInFahrenheit = scan.nextDouble();
 
-    double temperatureInCelsius = (temperatureInFahrenheit - 32) * ((double)5/(double)9);
+    temperatureInCelsius = (temperatureInFahrenheit - 32) * ((double)5/(double)9);
 
     temperatureInCelsius = (double)Math.round(temperatureInCelsius * 100) / 100;
 
 
     System.out.println("Please enter a 5-character string:");
-    String inputString = scan.next();
-    String reversedString = "";
+    inputString = scan.next();
 
     inputString = inputString.substring(1, inputString.length() - 1);
 
@@ -40,11 +40,11 @@ public class Assignment1 {
       reversedString += inputString.toCharArray()[i - 1];
     }
 
-
-
     int randomNum = ThreadLocalRandom.current().nextInt(32, 16384 + 1);
 
     System.out.println("Random number generated. Continuing...");
     System.out.println(temperatureInCelsius + reversedString + randomNum);
+
+    scan.close();
   }
 }
