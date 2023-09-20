@@ -7,16 +7,11 @@ public class Assignment1 {
   public static void main(String[] args) {
     // Add your code here
     String inputString, reversedString = "";
-
     int randomNum;
-    double temperatureInFahrenheit, temperatureInCelsius;
-  
+    double fahrenheit, celsius;
     final int RANDOM_NUMBER_RANGE = (16384 - 32);
 
     Scanner scan = new Scanner(System.in);
-
-
-  
 
     System.out.println();
     System.out.println("EEEEEEEE        SSSSSSS");
@@ -28,18 +23,13 @@ public class Assignment1 {
     System.out.println("EEEEEEEE      SSSSSSS  ");
     System.out.println();
 
-
-
-
     System.out.println("Please enter a number in Fahrenheit:");
-    temperatureInFahrenheit = scan.nextDouble();
+    fahrenheit = scan.nextDouble();
 
-    temperatureInCelsius = (temperatureInFahrenheit - 32) * ((double)5/(double)9);
+    celsius = (fahrenheit - 32) * ((double)5/(double)9);
 
     //rounding to two decimal places
-    temperatureInCelsius = (double)Math.round(temperatureInCelsius * 100) / 100;
-
-
+    celsius = (double)Math.round(celsius * 100) / 100;
   
     System.out.println("Please enter a 5-character string:");
     inputString = scan.next();
@@ -50,12 +40,10 @@ public class Assignment1 {
       reversedString += inputString.toCharArray()[i - 1];
     }
 
-
-
     randomNum = (int)(Math.random() * RANDOM_NUMBER_RANGE) + 32;
 
     System.out.println("Random number generated. Continuing...");
-    System.out.println(temperatureInCelsius + reversedString + randomNum);
+    System.out.println(celsius + reversedString + randomNum);
 
     scan.close();
   }
