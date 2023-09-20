@@ -36,6 +36,7 @@ public class Assignment1 {
 
     inputString = inputString.substring(1, inputString.length() - 1);
 
+    //Reversing the shortened inputString
     for(int i = inputString.length(); i > 0; i--) {
       reversedString += inputString.toCharArray()[i - 1];
     }
