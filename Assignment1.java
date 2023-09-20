@@ -28,18 +28,21 @@ public class Assignment1 {
 
     temperatureInCelsius = (temperatureInFahrenheit - 32) * ((double)5/(double)9);
 
+    //rounding to two decimal places
     temperatureInCelsius = (double)Math.round(temperatureInCelsius * 100) / 100;
 
 
+  
     System.out.println("Please enter a 5-character string:");
     inputString = scan.next();
-
 
     inputString = inputString.substring(1, inputString.length() - 1);
 
     for(int i = inputString.length(); i > 0; i--) {
       reversedString += inputString.toCharArray()[i - 1];
     }
+
+
 
     int randomNum = (int)(Math.random() * RANDOM_NUMBER_RANGE) + 32;
 
