@@ -1,7 +1,6 @@
 // Import libraries here
 import java.util.Scanner;
 // emmet spaeth
-import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Assignment1 {
@@ -9,6 +8,7 @@ public class Assignment1 {
     // Add your code here
     String inputString, reversedString = "";
     double temperatureInFahrenheit, temperatureInCelsius;
+    final int RANDOM_NUMBER_RANGE = (16384 - 32);
 
     Scanner scan = new Scanner(System.in);
 
@@ -34,11 +34,6 @@ public class Assignment1 {
     System.out.println("Please enter a 5-character string:");
     inputString = scan.next();
 
-    if(inputString.length() != 5) {
-      scan.close();
-      //So all inputs are the desired length
-      throw new IllegalArgumentException("Your string isn't five characters!");
-    }
 
     inputString = inputString.substring(1, inputString.length() - 1);
 
@@ -46,7 +41,7 @@ public class Assignment1 {
       reversedString += inputString.toCharArray()[i - 1];
     }
 
-    int randomNum = ThreadLocalRandom.current().nextInt(32, 16384 + 1);
+    int randomNum = (int)(Math.random() * RANDOM_NUMBER_RANGE) + 32;
 
     System.out.println("Random number generated. Continuing...");
     System.out.println(temperatureInCelsius + reversedString + randomNum);
