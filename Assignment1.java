@@ -34,6 +34,12 @@ public class Assignment1 {
     System.out.println("Please enter a 5-character string:");
     inputString = scan.next();
 
+    if(inputString.length() != 5) {
+      scan.close();
+      //So all inputs are the desired length
+      throw new IllegalArgumentException("Your string isn't five characters!");
+    }
+
     inputString = inputString.substring(1, inputString.length() - 1);
 
     for(int i = inputString.length(); i > 0; i--) {
