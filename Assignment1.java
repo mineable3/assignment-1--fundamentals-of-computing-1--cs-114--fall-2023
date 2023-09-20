@@ -7,10 +7,16 @@ public class Assignment1 {
   public static void main(String[] args) {
     // Add your code here
     String inputString, reversedString = "";
+
+    int randomNum;
     double temperatureInFahrenheit, temperatureInCelsius;
+  
     final int RANDOM_NUMBER_RANGE = (16384 - 32);
 
     Scanner scan = new Scanner(System.in);
+
+
+  
 
     System.out.println();
     System.out.println("EEEEEEEE        SSSSSSS");
@@ -21,6 +27,8 @@ public class Assignment1 {
     System.out.println("EEEEEEEE          SSSSS");
     System.out.println("EEEEEEEE      SSSSSSS  ");
     System.out.println();
+
+
 
 
     System.out.println("Please enter a number in Fahrenheit:");
@@ -44,7 +52,7 @@ public class Assignment1 {
 
 
 
-    int randomNum = (int)(Math.random() * RANDOM_NUMBER_RANGE) + 32;
+    randomNum = (int)(Math.random() * RANDOM_NUMBER_RANGE) + 32;
 
     System.out.println("Random number generated. Continuing...");
     System.out.println(temperatureInCelsius + reversedString + randomNum);
